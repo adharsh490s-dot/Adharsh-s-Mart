@@ -166,7 +166,7 @@ function ProductPage() {
           </div>
 
           <ul className="space-y-1.5 text-sm text-muted-foreground">
-            {product.highlights.map((h) => (
+            {product.highlights.map((h: string) => (
               <li key={h} className="flex gap-2">
                 <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" />
                 <span>{h}</span>
@@ -244,7 +244,7 @@ function ProductPage() {
           <h2 className="text-lg font-bold">Specifications</h2>
           <table className="mt-3 w-full text-sm">
             <tbody>
-              {product.specs.map((s) => (
+              {product.specs.map((s: { label: string; value: string }) => (
                 <tr key={s.label} className="border-b border-border last:border-0">
                   <th scope="row" className="py-2 pr-4 text-left font-medium text-muted-foreground">{s.label}</th>
                   <td className="py-2 text-right">{s.value}</td>

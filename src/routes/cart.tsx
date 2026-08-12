@@ -169,7 +169,7 @@ function CartPage() {
   );
 }
 
-function Row({ label, value, tone }: { label: string; value: string; tone?: "success" }) {
+function Row({ label, value, tone }: { label: string; value: string; tone?: "success" | undefined }) {
   return (
     <div className="flex items-center justify-between text-sm">
       <span className="text-muted-foreground">{label}</span>
