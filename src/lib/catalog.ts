@@ -18,10 +18,10 @@ export type Product = {
   description: string;
   highlights: string[];
   specs: { label: string; value: string }[];
-  badge?: string;
-  bestSeller?: boolean;
-  newArrival?: boolean;
-  deal?: boolean;
+  badge?: string | undefined;
+  bestSeller?: boolean | undefined;
+  newArrival?: boolean | undefined;
+  deal?: boolean | undefined;
   createdAt: string;
 };
 
@@ -238,10 +238,10 @@ export function reviewsFor(product: Product): Review[] {
     const k = (seedNum + i * 3) % reviewAuthors.length;
     return {
       id: `${product.id}-r${i}`,
-      author: reviewAuthors[k],
+      author: reviewAuthors[k]!,
       rating: Math.max(3, Math.min(5, Math.round(product.rating + (i % 3) - 1))),
-      title: reviewTitles[(seedNum + i) % reviewTitles.length],
-      body: reviewBodies[(seedNum + i * 2) % reviewBodies.length],
+      title: reviewTitles[(seedNum + i) % reviewTitles.length]!,
+      body: reviewBodies[(seedNum + i * 2) % reviewBodies.length]!,
       date: new Date(2026, 5, 1 + ((seedNum + i * 5) % 60)).toISOString(),
       verified: i !== 3,
       helpful: ((seedNum * (i + 2)) % 87) + 3,
