@@ -55,14 +55,16 @@ const demoAddress: Address = {
 };
 
 function demoOrders(): Order[] {
-  const picks = [products[6]!, products[24]!, products[29]!];
+  const p0 = products[6]!;
+  const p1 = products[24]!;
+  const p2 = products[29]!;
   return [
     {
       id: "SC-2026-41027",
       createdAt: new Date(2026, 6, 22).toISOString(),
-      items: [{ productId: picks[0].id, title: picks[0].title, qty: 1, price: picks[0].price }],
-      total: picks[0].price,
-      savings: picks[0].mrp - picks[0].price,
+      items: [{ productId: p0.id, title: p0.title, qty: 1, price: p0.price }],
+      total: p0.price,
+      savings: p0.mrp - p0.price,
       address: demoAddress,
       delivery: "Express Delivery",
       payment: "UPI",
@@ -73,10 +75,10 @@ function demoOrders(): Order[] {
       id: "SC-2026-43918",
       createdAt: new Date(2026, 7, 6).toISOString(),
       items: [
-        { productId: picks[1].id, title: picks[1].title, qty: 1, price: picks[1].price },
-        { productId: picks[2].id, title: picks[2].title, qty: 2, price: picks[2].price },
+        { productId: p1.id, title: p1.title, qty: 1, price: p1.price },
+        { productId: p2.id, title: p2.title, qty: 2, price: p2.price },
       ],
-      total: picks[1].price + picks[2].price * 2,
+      total: p1.price + p2.price * 2,
       savings: 3200,
       address: demoAddress,
       delivery: "FREE Delivery",
