@@ -283,7 +283,7 @@ export function MobileTabBar() {
           <li key={i.to}>
             <Link
               to={i.to}
-              search={i.to === "/search" ? { q: "" } : undefined}
+              search={i.to === "/search" ? { q: "" } : {}}
               className="relative flex min-h-14 flex-col items-center justify-center gap-0.5 text-[11px] text-muted-foreground"
               activeProps={{ className: "text-primary" }}
               activeOptions={{ exact: i.to === "/" }}
