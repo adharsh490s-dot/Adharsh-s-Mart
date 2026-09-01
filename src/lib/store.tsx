@@ -125,7 +125,11 @@ type Ctx = State & {
   totals: { subtotal: number; mrpTotal: number; discount: number; coupon: number; delivery: number; tax: number; total: number };
 };
 
-const StoreContext = createContext<Ctx | null>(null);
+// Keep a single context instance across HMR updates so components that reload
+// separately from the provider don't end up reading a fresh, empty context.
+const g = globalThis as unknown as { __adharshStoreContext?: React.Context<Ctx | null> };
+const StoreContext = g.__adharshStoreContext ?? createContext<Ctx | null>(null);
+g.__adharshStoreContext = StoreContext;
 
 export const COUPONS: Record<string, number> = { ADHARSH10: 10, NEW500: 5, FEST20: 20 };
 
