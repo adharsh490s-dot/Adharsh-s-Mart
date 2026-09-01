@@ -12,10 +12,10 @@ import logo from "@/assets/logo.png";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in or create an account | SwiftCart" },
-      { name: "description", content: "Access your SwiftCart orders, wishlist and saved addresses. Demo authentication — no real credentials are verified." },
-      { property: "og:title", content: "Sign in | SwiftCart" },
-      { property: "og:description", content: "Sign in to SwiftCart to track orders and sync your cart." },
+      { title: "Sign in or create an account | Adharsh's Mart" },
+      { name: "description", content: "Access your Adharsh's Mart orders, wishlist and saved addresses. Demo authentication — no real credentials are verified." },
+      { property: "og:title", content: "Sign in | Adharsh's Mart" },
+      { property: "og:description", content: "Sign in to Adharsh's Mart to track orders and sync your cart." },
     ],
   }),
   component: AuthPage,
@@ -36,7 +36,7 @@ function AuthPage() {
   return (
     <div className="mx-auto flex max-w-md flex-col items-center px-4 py-12 sm:px-5">
       <img src={logo} alt="" width={48} height={48} className="size-12" />
-      <h1 className="mt-3 text-2xl font-bold">Welcome to SwiftCart</h1>
+      <h1 className="mt-3 text-2xl font-bold">Welcome to Adharsh's Mart</h1>
       <p className="mt-1 text-center text-sm text-muted-foreground">Everything you need. Delivered smarter.</p>
 
       <div className="surface mt-6 w-full p-6">
@@ -66,7 +66,7 @@ function AuthPage() {
                   toast.error("Enter your email/phone and password");
                   return;
                 }
-                demoSignIn(login.id.split("@")[0] || "Shopper", login.id.includes("@") ? login.id : `${login.id}@swiftcart.app`, "+91 98450 12345");
+                demoSignIn(login.id.split("@")[0] || "Shopper", login.id.includes("@") ? login.id : `${login.id}@adharshmart.app`, "+91 98450 12345");
               }}
             >
               Sign in
@@ -108,7 +108,7 @@ function AuthPage() {
         <div className="my-4 flex items-center gap-3 text-xs text-muted-foreground">
           <span className="h-px flex-1 bg-border" /> or <span className="h-px flex-1 bg-border" />
         </div>
-        <Button variant="outline" className="w-full" onClick={() => demoSignIn("Adharsh S", "adharsh@swiftcart.app", "+91 98450 12345")}>
+        <Button variant="outline" className="w-full" onClick={() => demoSignIn("Adharsh S", "adharsh@adharshmart.app", "+91 98450 12345")}>
           Continue with Google (demo)
         </Button>
       </div>

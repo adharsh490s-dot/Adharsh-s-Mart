@@ -15,9 +15,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/checkout")({
   head: () => ({
     meta: [
-      { title: "Secure Checkout | SwiftCart" },
-      { name: "description", content: "Complete your SwiftCart order in four quick steps: address, delivery method, payment and review." },
-      { property: "og:title", content: "Secure Checkout | SwiftCart" },
+      { title: "Secure Checkout | Adharsh's Mart" },
+      { name: "description", content: "Complete your Adharsh's Mart order in four quick steps: address, delivery method, payment and review." },
+      { property: "og:title", content: "Secure Checkout | Adharsh's Mart" },
       { property: "og:description", content: "A fast, secure four-step checkout. This demo never collects real payment credentials." },
     ],
   }),
@@ -243,7 +243,7 @@ function CheckoutPage() {
                 ))}
               </RadioGroup>
               <p className="rounded-lg bg-muted px-3 py-2 text-xs text-muted-foreground">
-                This is a simulated payment step. SwiftCart's demo never asks for card numbers, UPI PINs or bank credentials.
+                This is a simulated payment step. Adharsh's Mart's demo never asks for card numbers, UPI PINs or bank credentials.
               </p>
               <div className="flex gap-2">
                 <Button variant="outline" onClick={() => setStep(1)}>

@@ -10,10 +10,10 @@ export const Route = createFileRoute("/products/")({
   }),
   head: () => ({
     meta: [
-      { title: "All Products — Shop 48 Curated Picks | SwiftCart" },
-      { name: "description", content: "Browse every SwiftCart product with live filters for price, brand, rating, discount and availability." },
-      { property: "og:title", content: "All Products | SwiftCart" },
-      { property: "og:description", content: "Filter, sort and compare thousands of products across ten categories on SwiftCart." },
+      { title: "All Products — Shop 48 Curated Picks | Adharsh's Mart" },
+      { name: "description", content: "Browse every Adharsh's Mart product with live filters for price, brand, rating, discount and availability." },
+      { property: "og:title", content: "All Products | Adharsh's Mart" },
+      { property: "og:description", content: "Filter, sort and compare thousands of products across ten categories on Adharsh's Mart." },
     ],
   }),
   component: ProductsPage,
@@ -24,7 +24,7 @@ function ProductsPage() {
   return (
     <ProductListing
       heading="All products"
-      description="Every SwiftCart listing, filterable by price, brand, rating and discount."
+      description="Every Adharsh's Mart listing, filterable by price, brand, rating and discount."
       initialSort={search.sort ?? "featured"}
       query={search.q ?? ""}
     />

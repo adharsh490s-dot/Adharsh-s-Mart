@@ -13,10 +13,10 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
-      { title: "Your Cart | SwiftCart" },
-      { name: "description", content: "Review the items in your SwiftCart basket, apply coupons and see your total savings before checkout." },
-      { property: "og:title", content: "Your Cart | SwiftCart" },
-      { property: "og:description", content: "Review items, apply a coupon and check out securely on SwiftCart." },
+      { title: "Your Cart | Adharsh's Mart" },
+      { name: "description", content: "Review the items in your Adharsh's Mart basket, apply coupons and see your total savings before checkout." },
+      { property: "og:title", content: "Your Cart | Adharsh's Mart" },
+      { property: "og:description", content: "Review items, apply a coupon and check out securely on Adharsh's Mart." },
     ],
   }),
   component: CartPage,
@@ -32,7 +32,7 @@ function CartPage() {
       toast.success("Coupon applied", { description: `${code.toUpperCase()} is now active on this order.` });
       setCode("");
     } else {
-      toast.error("Invalid coupon", { description: "Try SWIFT10, NEW500 or FEST20." });
+      toast.error("Invalid coupon", { description: "Try ADHARSH10, NEW500 or FEST20." });
     }
   };
 

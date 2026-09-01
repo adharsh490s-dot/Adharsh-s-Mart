@@ -16,9 +16,9 @@ export const Route = createFileRoute("/search")({
   }),
   head: () => ({
     meta: [
-      { title: "Search SwiftCart — Find products fast" },
-      { name: "description", content: "Search across SwiftCart's catalogue with instant suggestions, category matches and smart fallbacks." },
-      { property: "og:title", content: "Search | SwiftCart" },
+      { title: "Search Adharsh's Mart — Find products fast" },
+      { name: "description", content: "Search across Adharsh's Mart's catalogue with instant suggestions, category matches and smart fallbacks." },
+      { property: "og:title", content: "Search | Adharsh's Mart" },
       { property: "og:description", content: "Find exactly what you need across electronics, fashion, home, beauty and more." },
     ],
   }),
@@ -60,7 +60,7 @@ function SearchPage() {
 
   return (
     <div className="mx-auto max-w-[1400px] px-4 py-6 sm:px-5">
-      <h1 className="text-2xl font-bold sm:text-3xl">{active ? `Results for “${active}”` : "Search SwiftCart"}</h1>
+      <h1 className="text-2xl font-bold sm:text-3xl">{active ? `Results for “${active}”` : "Search Adharsh's Mart"}</h1>
 
       <form
         className="mt-4 flex max-w-xl gap-2"

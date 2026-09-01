@@ -60,7 +60,7 @@ function demoOrders(): Order[] {
   const p2 = products[29]!;
   return [
     {
-      id: "SC-2026-41027",
+      id: "AM-2026-41027",
       createdAt: new Date(2026, 6, 22).toISOString(),
       items: [{ productId: p0.id, title: p0.title, qty: 1, price: p0.price }],
       total: p0.price,
@@ -72,7 +72,7 @@ function demoOrders(): Order[] {
       eta: new Date(2026, 6, 24).toISOString(),
     },
     {
-      id: "SC-2026-43918",
+      id: "AM-2026-43918",
       createdAt: new Date(2026, 7, 6).toISOString(),
       items: [
         { productId: p1.id, title: p1.title, qty: 1, price: p1.price },
@@ -127,7 +127,7 @@ type Ctx = State & {
 
 const StoreContext = createContext<Ctx | null>(null);
 
-export const COUPONS: Record<string, number> = { SWIFT10: 10, NEW500: 5, FEST20: 20 };
+export const COUPONS: Record<string, number> = { ADHARSH10: 10, NEW500: 5, FEST20: 20 };
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<State>(initialState);
@@ -229,7 +229,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     (o) => {
       const order: Order = {
         ...o,
-        id: `SC-2026-${Math.floor(10000 + Math.random() * 89999)}`,
+        id: `AM-2026-${Math.floor(10000 + Math.random() * 89999)}`,
         createdAt: new Date().toISOString(),
         status: "Placed",
       };

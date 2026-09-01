@@ -179,9 +179,9 @@ export const products: Product[] = seeds.map((s, i) => {
     description,
     highlights: [
       description,
-      "Backed by SwiftCart Verified quality checks",
+      "Backed by Adharsh's Mart Verified quality checks",
       "Free 7-day replacement on eligible returns",
-      "Ships from the nearest SwiftCart fulfilment hub",
+      "Ships from the nearest Adharsh's Mart fulfilment hub",
     ],
     specs: [
       { label: "Brand", value: brand },
@@ -189,7 +189,7 @@ export const products: Product[] = seeds.map((s, i) => {
       ...(specBank[category] ?? []),
       { label: "Country of origin", value: "India" },
     ],
-    badge: i % 7 === 0 ? "SwiftCart Choice" : discount >= 40 ? "Big Saving" : undefined,
+    badge: i % 7 === 0 ? "Adharsh's Mart Choice" : discount >= 40 ? "Big Saving" : undefined,
     bestSeller: reviews > 9000,
     newArrival: i % 5 === 2,
     deal: discount >= 35,
@@ -263,8 +263,8 @@ export type Question = { q: string; a: string; by: string };
 
 export function questionsFor(product: Product): Question[] {
   return [
-    { q: `Is the ${product.brand} warranty valid across India?`, a: "Yes, the warranty is honoured at all authorised service partners nationwide.", by: "SwiftCart Seller" },
+    { q: `Is the ${product.brand} warranty valid across India?`, a: "Yes, the warranty is honoured at all authorised service partners nationwide.", by: "Adharsh's Mart Seller" },
     { q: "Is this the latest model available?", a: "Yes, this is the current-generation model listed by the brand for 2026.", by: "Verified Buyer" },
-    { q: "Does it qualify for no-cost EMI?", a: "No-cost EMI is available on orders above ₹3,000 with most major bank cards.", by: "SwiftCart Support" },
+    { q: "Does it qualify for no-cost EMI?", a: "No-cost EMI is available on orders above ₹3,000 with most major bank cards.", by: "Adharsh's Mart Support" },
   ];
 }

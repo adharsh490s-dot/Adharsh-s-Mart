@@ -7,10 +7,10 @@ import { discountOf, products } from "@/lib/catalog";
 export const Route = createFileRoute("/deals")({
   head: () => ({
     meta: [
-      { title: "Today's Deals — Up to 60% off | SwiftCart" },
-      { name: "description", content: "Live SwiftCart deals refreshed daily: discounts up to 60% off across electronics, home, fashion and beauty." },
-      { property: "og:title", content: "Today's Deals | SwiftCart" },
-      { property: "og:description", content: "Limited-time price drops across the SwiftCart catalogue. Ends soon." },
+      { title: "Today's Deals — Up to 60% off | Adharsh's Mart" },
+      { name: "description", content: "Live Adharsh's Mart deals refreshed daily: discounts up to 60% off across electronics, home, fashion and beauty." },
+      { property: "og:title", content: "Today's Deals | Adharsh's Mart" },
+      { property: "og:description", content: "Limited-time price drops across the Adharsh's Mart catalogue. Ends soon." },
     ],
   }),
   component: DealsPage,

@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
 
 const columns = [
-  { title: "Get to Know Us", links: ["About SwiftCart", "Careers", "Press", "Investor Relations"] },
+  { title: "Get to Know Us", links: ["About Adharsh's Mart", "Careers", "Press", "Investor Relations"] },
   { title: "Customer Service", links: ["Help Center", "Returns", "Shipping", "Contact Us"] },
-  { title: "Make Money With Us", links: ["Sell on SwiftCart", "Affiliate Program", "Advertise Products"] },
+  { title: "Make Money With Us", links: ["Sell on Adharsh's Mart", "Affiliate Program", "Advertise Products"] },
   { title: "Legal", links: ["Privacy", "Terms", "Cookies"] },
 ];
 
@@ -16,7 +16,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2">
               <img src={logo} alt="" width={32} height={32} loading="lazy" className="size-8" />
-              <span className="font-display text-lg font-bold">SwiftCart</span>
+              <span className="font-display text-lg font-bold">Adharsh's Mart</span>
             </Link>
             <p className="mt-3 max-w-xs text-sm text-ink-foreground/70">Everything you need. Delivered smarter.</p>
           </div>
@@ -38,7 +38,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-[1400px] px-5 py-5 text-center text-xs text-ink-foreground/60">
-          © 2026 SwiftCart. All rights reserved. Demo storefront — no real transactions are processed.
+          © 2026 Adharsh's Mart. All rights reserved. Demo storefront — no real transactions are processed.
         </p>
       </div>
     </footer>
