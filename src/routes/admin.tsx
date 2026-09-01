@@ -16,10 +16,10 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Admin Dashboard | SwiftCart" },
-      { name: "description", content: "SwiftCart operations dashboard: sales analytics, product inventory, order status, customers, categories and coupons." },
-      { property: "og:title", content: "Admin Dashboard | SwiftCart" },
-      { property: "og:description", content: "Sales, orders, inventory and coupon management for SwiftCart operators." },
+      { title: "Admin Dashboard | Adharsh's Mart" },
+      { name: "description", content: "Adharsh's Mart operations dashboard: sales analytics, product inventory, order status, customers, categories and coupons." },
+      { property: "og:title", content: "Admin Dashboard | Adharsh's Mart" },
+      { property: "og:description", content: "Sales, orders, inventory and coupon management for Adharsh's Mart operators." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -49,7 +49,7 @@ function AdminPage() {
   const [catalog, setCatalog] = useState(seedProducts.slice(0, 12).map((p) => ({ id: p.id, title: p.title, category: p.category, price: p.price, stock: p.stock })));
   const [draft, setDraft] = useState({ title: "", category: "electronics", price: "", stock: "" });
   const [coupons, setCoupons] = useState([
-    { code: "SWIFT10", percent: 10, expires: "2026-12-31" },
+    { code: "ADHARSH10", percent: 10, expires: "2026-12-31" },
     { code: "FEST20", percent: 20, expires: "2026-09-30" },
   ]);
   const [couponDraft, setCouponDraft] = useState({ code: "", percent: "", expires: "" });
@@ -78,7 +78,7 @@ function AdminPage() {
       <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
         <div className="min-w-0">
           <h1 className="truncate text-2xl font-bold sm:text-3xl">Admin dashboard</h1>
-          <p className="text-sm text-muted-foreground">Operations overview for the SwiftCart storefront.</p>
+          <p className="text-sm text-muted-foreground">Operations overview for the Adharsh's Mart storefront.</p>
         </div>
         <Button asChild variant="outline" size="sm">
           <Link to="/">View storefront</Link>

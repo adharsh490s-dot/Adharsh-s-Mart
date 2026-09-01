@@ -9,10 +9,10 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/orders/")({
   head: () => ({
     meta: [
-      { title: "Your Orders | SwiftCart" },
-      { name: "description", content: "See every SwiftCart order you've placed, track live shipments and reorder in one tap." },
-      { property: "og:title", content: "Your Orders | SwiftCart" },
-      { property: "og:description", content: "Order history, live tracking and quick reordering on SwiftCart." },
+      { title: "Your Orders | Adharsh's Mart" },
+      { name: "description", content: "See every Adharsh's Mart order you've placed, track live shipments and reorder in one tap." },
+      { property: "og:title", content: "Your Orders | Adharsh's Mart" },
+      { property: "og:description", content: "Order history, live tracking and quick reordering on Adharsh's Mart." },
     ],
   }),
   component: OrdersPage,

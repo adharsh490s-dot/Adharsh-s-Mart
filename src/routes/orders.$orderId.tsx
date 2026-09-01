@@ -11,10 +11,10 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/orders/$orderId")({
   head: () => ({
     meta: [
-      { title: "Track your order | SwiftCart" },
-      { name: "description", content: "Live SwiftCart order tracking with courier status, delivery timeline and estimated arrival." },
-      { property: "og:title", content: "Track your order | SwiftCart" },
-      { property: "og:description", content: "Follow your SwiftCart parcel from warehouse to doorstep." },
+      { title: "Track your order | Adharsh's Mart" },
+      { name: "description", content: "Live Adharsh's Mart order tracking with courier status, delivery timeline and estimated arrival." },
+      { property: "og:title", content: "Track your order | Adharsh's Mart" },
+      { property: "og:description", content: "Follow your Adharsh's Mart parcel from warehouse to doorstep." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -65,7 +65,7 @@ function TrackPage() {
         <div className="flex items-center gap-3">
           <Truck className="size-5 text-primary" />
           <p className="text-sm font-semibold">
-            {order.status === "Delivered" ? "Delivered — thanks for shopping with SwiftCart" : "SwiftEx courier · package in transit"}
+            {order.status === "Delivered" ? "Delivered — thanks for shopping with Adharsh's Mart" : "Adharsh Express courier · package in transit"}
           </p>
         </div>
         <Progress value={progress} className="mt-4 h-2" />

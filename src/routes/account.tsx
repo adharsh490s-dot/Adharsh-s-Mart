@@ -15,9 +15,9 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/account")({
   head: () => ({
     meta: [
-      { title: "Your Account | SwiftCart" },
-      { name: "description", content: "Manage your SwiftCart profile, orders, wishlist, addresses, payment methods and notification settings." },
-      { property: "og:title", content: "Your Account | SwiftCart" },
+      { title: "Your Account | Adharsh's Mart" },
+      { name: "description", content: "Manage your Adharsh's Mart profile, orders, wishlist, addresses, payment methods and notification settings." },
+      { property: "og:title", content: "Your Account | Adharsh's Mart" },
       { property: "og:description", content: "One dashboard for orders, addresses, wishlist and preferences." },
     ],
   }),
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/account")({
 
 function AccountPage() {
   const { user, signOut, orders, wishlist, addresses, removeAddress, setDefaultAddress } = useStore();
-  const [profile, setProfile] = useState({ name: user?.name ?? "Guest shopper", email: user?.email ?? "guest@swiftcart.app", phone: user?.phone ?? "+91 98450 12345" });
+  const [profile, setProfile] = useState({ name: user?.name ?? "Guest shopper", email: user?.email ?? "guest@adharshmart.app", phone: user?.phone ?? "+91 98450 12345" });
   const wishlistProducts = wishlist.map((id) => products.find((p) => p.id === id)).filter((p): p is (typeof products)[number] => Boolean(p));
 
   return (

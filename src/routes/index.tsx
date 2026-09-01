@@ -12,12 +12,12 @@ import heroImage from "@/assets/hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SwiftCart — Everything you need. Delivered smarter." },
+      { title: "Adharsh's Mart — Everything you need. Delivered smarter." },
       {
         name: "description",
-        content: "Shop electronics, mobiles, fashion, home, beauty and more on SwiftCart. Daily deals, verified sellers and fast free delivery across India.",
+        content: "Shop electronics, mobiles, fashion, home, beauty and more on Adharsh's Mart. Daily deals, verified sellers and fast free delivery across India.",
       },
-      { property: "og:title", content: "SwiftCart — Everything you need. Delivered smarter." },
+      { property: "og:title", content: "Adharsh's Mart — Everything you need. Delivered smarter." },
       { property: "og:description", content: "Millions of products, unbeatable deals and fast delivery — all in one smarter cart." },
     ],
   }),
@@ -36,7 +36,7 @@ function HomePage() {
       <section className="fade-up relative overflow-hidden rounded-3xl gradient-hero text-ink-foreground">
         <img
           src={heroImage}
-          alt="A curated selection of SwiftCart bestsellers floating on a deep blue studio backdrop"
+          alt="A curated selection of Adharsh's Mart bestsellers floating on a deep blue studio backdrop"
           width={1600}
           height={1104}
           className="absolute inset-0 size-full object-cover opacity-45"
@@ -116,7 +116,7 @@ function HomePage() {
         </div>
       </section>
 
-      <ProductCarousel title="Trending this week" subtitle="What thousands of SwiftCart shoppers are buying right now." products={trending} />
+      <ProductCarousel title="Trending this week" subtitle="What thousands of Adharsh's Mart shoppers are buying right now." products={trending} />
 
       {hydrated && recentProducts.length > 0 && (
         <ProductCarousel title="Recently viewed" subtitle="Pick up where you left off." products={recentProducts} />
@@ -146,7 +146,7 @@ function HomePage() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-bold sm:text-2xl">Why SwiftCart?</h2>
+        <h2 className="text-xl font-bold sm:text-2xl">Why Adharsh's Mart?</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: Zap, title: "Fast Delivery", copy: "Same-day and next-day delivery in 180+ cities." },
@@ -167,7 +167,7 @@ function HomePage() {
 
       <section className="surface flex flex-col items-start gap-3 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
         <div>
-          <h2 className="text-lg font-bold">Save more with code SWIFT10</h2>
+          <h2 className="text-lg font-bold">Save more with code ADHARSH10</h2>
           <p className="text-sm text-muted-foreground">Flat 10% off your first order above {inr(1499)}. Applied at checkout.</p>
         </div>
         <Button asChild>

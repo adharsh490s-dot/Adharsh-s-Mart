@@ -8,10 +8,10 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/order-success/$orderId")({
   head: () => ({
     meta: [
-      { title: "Order Confirmed | SwiftCart" },
-      { name: "description", content: "Your SwiftCart order is confirmed. Track its progress or keep shopping." },
-      { property: "og:title", content: "Order Confirmed | SwiftCart" },
-      { property: "og:description", content: "Order placed successfully on SwiftCart." },
+      { title: "Order Confirmed | Adharsh's Mart" },
+      { name: "description", content: "Your Adharsh's Mart order is confirmed. Track its progress or keep shopping." },
+      { property: "og:title", content: "Order Confirmed | Adharsh's Mart" },
+      { property: "og:description", content: "Order placed successfully on Adharsh's Mart." },
       { name: "robots", content: "noindex" },
     ],
   }),

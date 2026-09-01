@@ -10,9 +10,9 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/wishlist")({
   head: () => ({
     meta: [
-      { title: "Your Wishlist | SwiftCart" },
-      { name: "description", content: "Everything you saved on SwiftCart, with stock status and price-drop indicators." },
-      { property: "og:title", content: "Your Wishlist | SwiftCart" },
+      { title: "Your Wishlist | Adharsh's Mart" },
+      { name: "description", content: "Everything you saved on Adharsh's Mart, with stock status and price-drop indicators." },
+      { property: "og:title", content: "Your Wishlist | Adharsh's Mart" },
       { property: "og:description", content: "Save products, watch prices and move items to your cart in one tap." },
     ],
   }),

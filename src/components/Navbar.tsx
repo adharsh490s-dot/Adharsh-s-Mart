@@ -54,7 +54,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="left" className="w-[85vw] max-w-sm overflow-y-auto">
               <SheetHeader>
-                <SheetTitle>Browse SwiftCart</SheetTitle>
+                <SheetTitle>Browse Adharsh's Mart</SheetTitle>
               </SheetHeader>
               <nav className="grid gap-1 p-4 pt-0">
                 <Link to="/products" className="rounded-lg px-3 py-2 text-sm font-medium hover:bg-muted">
@@ -87,9 +87,9 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
 
-          <Link to="/" className="flex shrink-0 items-center gap-2" aria-label="SwiftCart home">
+          <Link to="/" className="flex shrink-0 items-center gap-2" aria-label="Adharsh's Mart home">
             <img src={logo} alt="" width={32} height={32} className="size-8" />
-            <span className="font-display text-lg font-bold tracking-tight">SwiftCart</span>
+            <span className="font-display text-lg font-bold tracking-tight">Adharsh's Mart</span>
           </Link>
 
           <button
@@ -114,7 +114,7 @@ export function Navbar() {
               className="flex items-center"
             >
               <label htmlFor="site-search" className="sr-only">
-                Search SwiftCart
+                Search Adharsh's Mart
               </label>
               <Input
                 id="site-search"
@@ -144,7 +144,7 @@ export function Navbar() {
                         ))}
                       </Section>
                     )}
-                    <Section title="Popular on SwiftCart" icon={<TrendingUp className="size-3.5" />}>
+                    <Section title="Popular on Adharsh's Mart" icon={<TrendingUp className="size-3.5" />}>
                       {popular.map((s) => (
                         <Suggestion key={s} label={s} onClick={() => submit(s)} />
                       ))}

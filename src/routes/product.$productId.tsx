@@ -21,11 +21,11 @@ export const Route = createFileRoute("/product/$productId")({
     return { product };
   },
   head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Product unavailable | SwiftCart" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData) return { meta: [{ title: "Product unavailable | Adharsh's Mart" }, { name: "robots", content: "noindex" }] };
     const { product } = loaderData;
     return {
       meta: [
-        { title: `${product.title} — ${inr(product.price)} | SwiftCart` },
+        { title: `${product.title} — ${inr(product.price)} | Adharsh's Mart` },
         { name: "description", content: product.description },
         { property: "og:title", content: product.title },
         { property: "og:description", content: product.description },
@@ -160,8 +160,8 @@ function ProductPage() {
 
           <div className="surface space-y-2 p-4 text-sm">
             <h2 className="font-semibold">Available offers</h2>
-            <p>• Flat 10% off with code <span className="font-semibold">SWIFT10</span> on orders above {inr(1499)}</p>
-            <p>• Extra {inr(500)} off on your first SwiftCart order with <span className="font-semibold">NEW500</span></p>
+            <p>• Flat 10% off with code <span className="font-semibold">ADHARSH10</span> on orders above {inr(1499)}</p>
+            <p>• Extra {inr(500)} off on your first Adharsh's Mart order with <span className="font-semibold">NEW500</span></p>
             <p>• Bank offer: 5% cashback on eligible credit cards</p>
           </div>
 
@@ -227,7 +227,7 @@ function ProductPage() {
           <ul className="space-y-2 text-xs text-muted-foreground">
             <li className="flex items-center gap-2"><Truck className="size-4 text-primary" /> Free delivery on this order</li>
             <li className="flex items-center gap-2"><RotateCcw className="size-4 text-primary" /> 7-day replacement</li>
-            <li className="flex items-center gap-2"><ShieldCheck className="size-4 text-primary" /> Secure SwiftCart checkout</li>
+            <li className="flex items-center gap-2"><ShieldCheck className="size-4 text-primary" /> Secure Adharsh's Mart checkout</li>
           </ul>
         </aside>
       </div>
@@ -236,7 +236,7 @@ function ProductPage() {
         <div className="surface p-6">
           <h2 className="text-lg font-bold">About this product</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            {product.description} Designed by {product.brand} for people who expect their everyday gear to keep up. Every unit ships through SwiftCart's
+            {product.description} Designed by {product.brand} for people who expect their everyday gear to keep up. Every unit ships through Adharsh's Mart's
             verification pipeline, so what arrives is exactly what was listed — no grey imports, no surprises.
           </p>
         </div>
