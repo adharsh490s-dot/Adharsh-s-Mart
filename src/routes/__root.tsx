@@ -128,6 +128,8 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <StoreProvider>
+        <AuthSync />
+
         <div className="flex min-h-dvh flex-col">
           <Navbar />
           <main className="flex-1 pb-16 md:pb-0">
