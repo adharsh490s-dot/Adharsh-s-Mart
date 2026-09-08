@@ -26,6 +26,21 @@ export function categoryImage(slug: string) {
   return map[slug] ?? electronics;
 }
 
+const productFiles = import.meta.glob("@/assets/products/*.jpg", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}) as Record<string, string>;
+
+const productMap: Record<string, string> = Object.fromEntries(
+  Object.entries(productFiles).map(([path, url]) => [path.split("/").pop()!.replace(".jpg", ""), url]),
+);
+
+export function productImage(id: string | undefined, category = "electronics") {
+  return (id && productMap[id]) || categoryImage(category);
+}
+
+
 export function inr(value: number) {
   return `₹${value.toLocaleString("en-IN")}`;
 }
