@@ -7,7 +7,11 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { categories, products } from "@/lib/catalog";
 import { useStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
+import { useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import logo from "@/assets/logo.png";
+
 
 const popular = ["wireless earbuds", "5G phone", "air fryer", "running shoes", "coffee beans"];
 
@@ -18,8 +22,18 @@ export function Navbar() {
   const navigate = useNavigate();
   const boxRef = useRef<HTMLDivElement>(null);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const queryClient = useQueryClient();
+
+  const handleSignOut = async () => {
+    await queryClient.cancelQueries();
+    queryClient.clear();
+    await supabase.auth.signOut();
+    toast.success("Signed out");
+    navigate({ to: "/auth", replace: true });
+  };
 
   useEffect(() => setOpen(false), [pathname]);
+
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
