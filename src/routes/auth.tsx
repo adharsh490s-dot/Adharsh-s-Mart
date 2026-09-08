@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
-import { lovable } from "@/integrations/lovable";
 import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/auth")({
@@ -96,7 +95,11 @@ function AuthPage() {
 
   const handleGoogle = async () => {
     try {
-      await lovable.auth.signInWithOAuth("google", { redirect_uri: window.location.origin });
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: window.location.origin },
+      });
+      if (error) throw error;
     } catch {
       toast.error("Google sign-in could not be started");
     }
