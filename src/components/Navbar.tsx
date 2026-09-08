@@ -180,9 +180,26 @@ export function Navbar() {
           </div>
 
           <nav className="hidden items-center gap-1 lg:flex">
-            <NavItem to="/account" top={user ? `Hello, ${user.name.split(" ")[0]}` : "Hello, sign in"} bottom="Account" />
-            <NavItem to="/orders" top="Returns &" bottom="Orders" />
+            {user ? (
+              <>
+                <NavItem to="/account" top={`Hello, ${user.name.split(" ")[0]}`} bottom="Account" />
+                <NavItem to="/orders" top="Returns &" bottom="Orders" />
+                <button
+                  type="button"
+                  onClick={handleSignOut}
+                  className="rounded-lg px-3 py-1.5 text-left text-xs font-semibold text-ink-foreground/85 hover:bg-white/10 hover:text-ink-foreground"
+                >
+                  Sign out
+                </button>
+              </>
+            ) : (
+              <>
+                <NavItem to="/auth" top="Hello, sign in" bottom="Account" />
+                <NavItem to="/orders" top="Returns &" bottom="Orders" />
+              </>
+            )}
           </nav>
+
 
           <Link to="/wishlist" className="relative hidden shrink-0 rounded-lg p-2 hover:bg-white/10 sm:block" aria-label="Wishlist">
             <Heart className="size-5" />
