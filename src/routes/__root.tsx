@@ -15,6 +15,8 @@ import { StoreProvider } from "@/lib/store";
 import { Navbar, MobileTabBar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { AuthSync } from "@/components/AuthSync";
+
 
 function NotFoundComponent() {
   return (
