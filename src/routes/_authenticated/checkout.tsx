@@ -12,7 +12,7 @@ import { productImage, deliveryDate, inr } from "@/lib/media";
 import { useStore, type Address } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/checkout")({
+export const Route = createFileRoute("/_authenticated/_authenticated/checkout")({
   head: () => ({
     meta: [
       { title: "Secure Checkout | Adharsh's Mart" },
