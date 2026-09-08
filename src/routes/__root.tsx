@@ -15,6 +15,8 @@ import { StoreProvider } from "@/lib/store";
 import { Navbar, MobileTabBar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { AuthSync } from "@/components/AuthSync";
+
 
 function NotFoundComponent() {
   return (
@@ -126,6 +128,8 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <StoreProvider>
+        <AuthSync />
+
         <div className="flex min-h-dvh flex-col">
           <Navbar />
           <main className="flex-1 pb-16 md:pb-0">

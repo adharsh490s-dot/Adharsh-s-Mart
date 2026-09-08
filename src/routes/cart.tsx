@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { EmptyState } from "@/components/States";
 import { products } from "@/lib/catalog";
-import { categoryImage, inr } from "@/lib/media";
+import { productImage, inr } from "@/lib/media";
 import { useStore } from "@/lib/store";
 
 export const Route = createFileRoute("/cart")({
@@ -60,7 +60,7 @@ function CartPage() {
               <article key={product.id} className="surface grid grid-cols-[88px_minmax(0,1fr)] gap-4 p-4 sm:grid-cols-[120px_minmax(0,1fr)]">
                 <Link to="/product/$productId" params={{ productId: product.id }} className="shrink-0">
                   <img
-                    src={categoryImage(product.category)}
+                    src={productImage(product.id, product.category)}
                     alt={product.title}
                     loading="lazy"
                     width={200}
@@ -115,7 +115,7 @@ function CartPage() {
                 <div className="mt-3 grid gap-3 sm:grid-cols-2">
                   {savedProducts.map((p) => (
                     <div key={p.id} className="flex items-center gap-3 rounded-lg border border-border p-3">
-                      <img src={categoryImage(p.category)} alt={p.title} loading="lazy" width={100} height={100} className="size-14 rounded-md object-cover" />
+                      <img src={productImage(p.id, p.category)} alt={p.title} loading="lazy" width={100} height={100} className="size-14 rounded-md object-cover" />
                       <div className="min-w-0 flex-1">
                         <p className="line-clamp-1 text-sm font-medium">{p.title}</p>
                         <p className="text-sm font-bold">{inr(p.price)}</p>

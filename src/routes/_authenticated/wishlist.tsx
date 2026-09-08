@@ -4,10 +4,10 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { EmptyState } from "@/components/States";
 import { discountOf, products } from "@/lib/catalog";
-import { categoryImage, inr } from "@/lib/media";
+import { productImage, inr } from "@/lib/media";
 import { useStore } from "@/lib/store";
 
-export const Route = createFileRoute("/wishlist")({
+export const Route = createFileRoute("/_authenticated/wishlist")({
   head: () => ({
     meta: [
       { title: "Your Wishlist | Adharsh's Mart" },
@@ -45,7 +45,7 @@ function WishlistPage() {
           {items.map((p) => (
             <li key={p.id} className="surface grid grid-cols-[80px_minmax(0,1fr)] gap-4 p-4">
               <Link to="/product/$productId" params={{ productId: p.id }}>
-                <img src={categoryImage(p.category)} alt={p.title} loading="lazy" width={200} height={200} className="aspect-square w-full rounded-lg object-cover" />
+                <img src={productImage(p.id, p.category)} alt={p.title} loading="lazy" width={200} height={200} className="aspect-square w-full rounded-lg object-cover" />
               </Link>
               <div className="min-w-0">
                 <h2 className="line-clamp-2 text-sm font-semibold">

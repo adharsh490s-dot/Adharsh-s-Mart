@@ -5,7 +5,7 @@ import { EmptyState } from "@/components/States";
 import { deliveryDate, inr } from "@/lib/media";
 import { useStore } from "@/lib/store";
 
-export const Route = createFileRoute("/order-success/$orderId")({
+export const Route = createFileRoute("/_authenticated/order-success/$orderId")({
   head: () => ({
     meta: [
       { title: "Order Confirmed | Adharsh's Mart" },

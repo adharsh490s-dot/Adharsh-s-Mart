@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { EmptyState } from "@/components/States";
 import { products } from "@/lib/catalog";
-import { categoryImage, inr, shortDate } from "@/lib/media";
+import { productImage, inr, shortDate } from "@/lib/media";
 import { useStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/orders/$orderId")({
+export const Route = createFileRoute("/_authenticated/orders/$orderId")({
   head: () => ({
     meta: [
       { title: "Track your order | Adharsh's Mart" },
@@ -100,7 +100,7 @@ function TrackPage() {
             const p = products.find((x) => x.id === item.productId);
             return (
               <div key={item.productId} className="flex items-center gap-3">
-                <img src={categoryImage(p?.category ?? "electronics")} alt={item.title} loading="lazy" width={100} height={100} className="size-14 rounded-lg object-cover" />
+                <img src={productImage(p?.id, p?.category)} alt={item.title} loading="lazy" width={100} height={100} className="size-14 rounded-lg object-cover" />
                 <div className="min-w-0 flex-1">
                   <p className="line-clamp-1 text-sm font-medium">{item.title}</p>
                   <p className="text-xs text-muted-foreground">Qty {item.qty}</p>
