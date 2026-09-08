@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PackageSearch } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { EmptyState } from "@/components/States";
-import { categoryImage, inr, shortDate } from "@/lib/media";
+import { productImage, inr, shortDate } from "@/lib/media";
 import { products } from "@/lib/catalog";
 import { useStore } from "@/lib/store";
 
@@ -66,7 +66,7 @@ function OrdersPage() {
                   return (
                     <div key={item.productId} className="flex items-center gap-3">
                       <img
-                        src={categoryImage(p?.category ?? "electronics")}
+                        src={productImage(p?.id, p?.category)}
                         alt={item.title}
                         loading="lazy"
                         width={100}

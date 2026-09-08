@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { RatingStars } from "@/components/RatingStars";
 import { discountOf, type Product } from "@/lib/catalog";
-import { categoryImage, inr } from "@/lib/media";
+import { productImage, inr } from "@/lib/media";
 import { useStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +33,7 @@ export function ProductCard({ product, layout = "grid" }: { product: Product; la
       <div className={cn("relative overflow-hidden bg-muted", layout === "grid" ? "aspect-square" : "aspect-square w-full shrink-0 rounded-lg sm:w-48")}>
         <Link to="/product/$productId" params={{ productId: product.id }} aria-label={product.title}>
           <img
-            src={categoryImage(product.category)}
+            src={productImage(product.id, product.category)}
             alt={product.title}
             loading="lazy"
             width={900}

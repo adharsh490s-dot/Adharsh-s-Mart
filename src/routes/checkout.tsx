@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
 import { EmptyState } from "@/components/States";
-import { categoryImage, deliveryDate, inr } from "@/lib/media";
+import { productImage, deliveryDate, inr } from "@/lib/media";
 import { useStore, type Address } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -260,7 +260,7 @@ function CheckoutPage() {
               <div className="space-y-3">
                 {cartProducts.map(({ product, qty }) => (
                   <div key={product.id} className="flex items-center gap-3">
-                    <img src={categoryImage(product.category)} alt={product.title} loading="lazy" width={100} height={100} className="size-14 rounded-lg object-cover" />
+                    <img src={productImage(product.id, product.category)} alt={product.title} loading="lazy" width={100} height={100} className="size-14 rounded-lg object-cover" />
                     <div className="min-w-0 flex-1">
                       <p className="line-clamp-1 text-sm font-medium">{product.title}</p>
                       <p className="text-xs text-muted-foreground">Qty {qty}</p>

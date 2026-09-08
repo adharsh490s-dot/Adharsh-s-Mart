@@ -10,7 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { RatingStars } from "@/components/RatingStars";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import { discountOf, productById, products, questionsFor, ratingDistribution, reviewsFor } from "@/lib/catalog";
-import { categoryImage, deliveryDate, inr, shortDate } from "@/lib/media";
+import { productImage, deliveryDate, inr, shortDate } from "@/lib/media";
 import { useStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -49,7 +49,7 @@ function ProductPage() {
     setQty(1);
   }, [product.id, pushRecent]);
 
-  const image = categoryImage(product.category);
+  const image = productImage(product.id, product.category);
   const gallery = [image, image, image, image];
   const wished = wishlist.includes(product.id);
   const discount = discountOf(product);
@@ -262,7 +262,7 @@ function ProductPage() {
             <div key={p.id} className="flex items-center gap-4">
               {i > 0 && <span className="text-lg text-muted-foreground">+</span>}
               <Link to="/product/$productId" params={{ productId: p.id }} className="flex w-40 flex-col gap-2">
-                <img src={categoryImage(p.category)} alt={p.title} loading="lazy" width={200} height={200} className="aspect-square rounded-lg object-cover" />
+                <img src={productImage(p.id, p.category)} alt={p.title} loading="lazy" width={200} height={200} className="aspect-square rounded-lg object-cover" />
                 <span className="line-clamp-2 text-xs font-medium">{p.title}</span>
                 <span className="text-sm font-bold">{inr(p.price)}</span>
               </Link>

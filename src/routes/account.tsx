@@ -9,7 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { products } from "@/lib/catalog";
-import { categoryImage, inr, shortDate } from "@/lib/media";
+import { productImage, inr, shortDate } from "@/lib/media";
 import { useStore } from "@/lib/store";
 
 export const Route = createFileRoute("/account")({
@@ -125,7 +125,7 @@ function AccountPage() {
               <ul className="grid gap-3 sm:grid-cols-2">
                 {wishlistProducts.map((p) => (
                   <li key={p.id} className="flex items-center gap-3 rounded-lg border border-border p-3">
-                    <img src={categoryImage(p.category)} alt={p.title} loading="lazy" width={100} height={100} className="size-12 rounded-md object-cover" />
+                    <img src={productImage(p.id, p.category)} alt={p.title} loading="lazy" width={100} height={100} className="size-12 rounded-md object-cover" />
                     <div className="min-w-0 flex-1">
                       <p className="line-clamp-1 text-sm font-medium">{p.title}</p>
                       <p className="text-sm font-bold">{inr(p.price)}</p>
