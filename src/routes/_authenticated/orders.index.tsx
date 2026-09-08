@@ -6,7 +6,7 @@ import { productImage, inr, shortDate } from "@/lib/media";
 import { products } from "@/lib/catalog";
 import { useStore } from "@/lib/store";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/orders/")({
+export const Route = createFileRoute("/_authenticated/orders/")({
   head: () => ({
     meta: [
       { title: "Your Orders | Adharsh's Mart" },

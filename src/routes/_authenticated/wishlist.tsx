@@ -7,7 +7,7 @@ import { discountOf, products } from "@/lib/catalog";
 import { productImage, inr } from "@/lib/media";
 import { useStore } from "@/lib/store";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/wishlist")({
+export const Route = createFileRoute("/_authenticated/wishlist")({
   head: () => ({
     meta: [
       { title: "Your Wishlist | Adharsh's Mart" },

@@ -12,7 +12,7 @@ import { products } from "@/lib/catalog";
 import { productImage, inr, shortDate } from "@/lib/media";
 import { useStore } from "@/lib/store";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/account")({
+export const Route = createFileRoute("/_authenticated/account")({
   head: () => ({
     meta: [
       { title: "Your Account | Adharsh's Mart" },

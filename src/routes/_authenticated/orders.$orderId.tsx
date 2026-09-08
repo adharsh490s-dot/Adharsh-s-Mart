@@ -8,7 +8,7 @@ import { productImage, inr, shortDate } from "@/lib/media";
 import { useStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/orders/$orderId")({
+export const Route = createFileRoute("/_authenticated/orders/$orderId")({
   head: () => ({
     meta: [
       { title: "Track your order | Adharsh's Mart" },
