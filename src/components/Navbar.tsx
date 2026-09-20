@@ -59,7 +59,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50">
       <div className="bg-ink text-ink-foreground">
-        <div className="mx-auto flex h-16 max-w-[1400px] items-center gap-3 px-3 sm:px-5">
+        <div className="glass mx-auto flex h-16 max-w-[1400px] items-center gap-3 border-x-0 px-3 sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Open menu" className="text-ink-foreground hover:bg-white/10 lg:hidden">
@@ -68,7 +68,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="left" className="w-[85vw] max-w-sm overflow-y-auto">
               <SheetHeader>
-                <SheetTitle>Browse Adharsh's Mart</SheetTitle>
+                <SheetTitle>Browse AdharshMart</SheetTitle>
               </SheetHeader>
               <nav className="grid gap-1 p-4 pt-0">
                 <Link to="/products" className="rounded-lg px-3 py-2 text-sm font-medium hover:bg-muted">
@@ -101,9 +101,9 @@ export function Navbar() {
             </SheetContent>
           </Sheet>
 
-          <Link to="/" className="flex shrink-0 items-center gap-2" aria-label="Adharsh's Mart home">
-            <img src={logo} alt="" width={32} height={32} className="size-8" />
-            <span className="font-display text-lg font-bold tracking-tight">Adharsh's Mart</span>
+          <Link to="/" className="flex shrink-0 items-center gap-2" aria-label="AdharshMart home">
+            <img src={logo} alt="" width={32} height={32} className="size-8 drop-shadow-lg" />
+            <span className="text-lg font-semibold uppercase tracking-widest">Adharsh<span className="font-normal text-primary">Mart</span></span>
           </Link>
 
           <button
@@ -128,7 +128,7 @@ export function Navbar() {
               className="flex items-center"
             >
               <label htmlFor="site-search" className="sr-only">
-                Search Adharsh's Mart
+                Search AdharshMart
               </label>
               <Input
                 id="site-search"
@@ -138,8 +138,8 @@ export function Navbar() {
                   setQuery(e.target.value);
                   setOpen(true);
                 }}
-                placeholder="Search products, brands and categories"
-                className="h-10 rounded-r-none border-0 bg-card text-foreground"
+                 placeholder="Search the collection"
+                 className="h-10 rounded-r-none border border-r-0 border-border bg-card/70 text-foreground"
                 autoComplete="off"
               />
               <Button type="submit" aria-label="Search" className="h-10 rounded-l-none px-4">
@@ -158,7 +158,7 @@ export function Navbar() {
                         ))}
                       </Section>
                     )}
-                    <Section title="Popular on Adharsh's Mart" icon={<TrendingUp className="size-3.5" />}>
+                     <Section title="Popular on AdharshMart" icon={<TrendingUp className="size-3.5" />}>
                       {popular.map((s) => (
                         <Suggestion key={s} label={s} onClick={() => submit(s)} />
                       ))}
@@ -226,7 +226,7 @@ export function Navbar() {
           </Link>
         </div>
 
-        <div className="border-t border-white/10 bg-ink/95">
+        <div className="border-t border-border bg-ink/90 backdrop-blur-xl">
           <div className="no-scrollbar mx-auto flex max-w-[1400px] items-center gap-1 overflow-x-auto px-3 py-1.5 text-sm sm:px-5">
             <Link to="/deals" className="whitespace-nowrap rounded-md px-3 py-1.5 font-semibold text-deal hover:bg-white/10">
               Today's Deals

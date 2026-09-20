@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.png";
 
 const columns = [
-  { title: "Get to Know Us", links: ["About Adharsh's Mart", "Careers", "Press", "Investor Relations"] },
+  { title: "The House", links: ["About AdharshMart", "Our Edit", "Journal", "Private Access"] },
   { title: "Customer Service", links: ["Help Center", "Returns", "Shipping", "Contact Us"] },
   { title: "Make Money With Us", links: ["Sell on Adharsh's Mart", "Affiliate Program", "Advertise Products"] },
   { title: "Legal", links: ["Privacy", "Terms", "Cookies"] },
@@ -10,15 +10,15 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="mt-16 bg-ink text-ink-foreground">
+    <footer className="mt-24 border-t border-primary/20 bg-ink text-ink-foreground">
       <div className="mx-auto max-w-[1400px] px-5 py-12">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2">
               <img src={logo} alt="" width={32} height={32} loading="lazy" className="size-8" />
-              <span className="font-display text-lg font-bold">Adharsh's Mart</span>
+              <span className="text-lg font-semibold uppercase tracking-widest">Adharsh<span className="font-normal text-primary">Mart</span></span>
             </Link>
-            <p className="mt-3 max-w-xs text-sm text-ink-foreground/70">Everything you need. Delivered smarter.</p>
+            <p className="mt-3 max-w-xs font-display text-2xl text-ink-foreground/80">Everything you need. Delivered smarter.</p>
           </div>
           {columns.map((col) => (
             <div key={col.title}>
@@ -38,7 +38,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-[1400px] px-5 py-5 text-center text-xs text-ink-foreground/60">
-          © 2026 Adharsh's Mart. All rights reserved. Demo storefront — no real transactions are processed.
+          © 2026 AdharshMart. All rights reserved. Demo storefront — no real transactions are processed.
         </p>
       </div>
     </footer>
