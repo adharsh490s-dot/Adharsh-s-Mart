@@ -16,6 +16,7 @@ import { Navbar, MobileTabBar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { AuthSync } from "@/components/AuthSync";
+import { Concierge } from "@/components/Concierge";
 
 
 function NotFoundComponent() {
@@ -137,6 +138,7 @@ function RootComponent() {
           </main>
           <Footer />
           <MobileTabBar />
+          <Concierge />
         </div>
         <Toaster position="top-center" richColors />
       </StoreProvider>
