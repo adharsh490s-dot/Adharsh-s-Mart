@@ -12,7 +12,7 @@ import { products } from "@/lib/catalog";
 type ChatRequestBody = { messages?: unknown };
 
 const CATALOG = products
-  .map((p) => `${p.name} | ${p.brand} | ${p.category} | ₹${p.price} | ${p.rating}★`)
+  .map((p) => `${p.title} | ${p.brand} | ${p.category} | ₹${p.price} | ${p.rating}★`)
   .join("\n");
 
 const SYSTEM_PROMPT = `You are the AdharshMart Concierge, a warm, precise shopping assistant for a premium online marketplace.
