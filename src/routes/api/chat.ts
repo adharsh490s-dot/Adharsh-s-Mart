@@ -7,6 +7,7 @@ import {
 import { createOpenAI } from "@ai-sdk/openai";
 import { createFileRoute } from "@tanstack/react-router";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
+import { products } from "@/lib/catalog";
 
 type ChatRequestBody = { messages?: unknown };
 
