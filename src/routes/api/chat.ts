@@ -10,9 +10,17 @@ import { convertToModelMessages, streamText, type UIMessage } from "ai";
 
 type ChatRequestBody = { messages?: unknown };
 
+const CATALOG = products
+  .map((p) => `${p.name} | ${p.brand} | ${p.category} | ₹${p.price} | ${p.rating}★`)
+  .join("\n");
+
 const SYSTEM_PROMPT = `You are the AdharshMart Concierge, a warm, precise shopping assistant for a premium online marketplace.
 Help shoppers discover products, compare options, understand prices in Indian Rupees, track demo deliveries, and navigate cart, checkout, wishlist and account pages.
-Keep answers short and elegant: two to four sentences, or a tight bullet list. Never invent order numbers or prices you were not given; instead explain where the shopper can see them.`;
+Recommend ONLY products from the catalogue below, using their exact names and prices. If nothing fits, say so and suggest the closest catalogue option.
+Keep answers short and elegant: two to four sentences, or a tight bullet list. Never invent order numbers or prices; explain where the shopper can see them.
+
+CATALOGUE:
+${CATALOG}`;
 
 export const Route = createFileRoute("/api/chat")({
   server: {
